@@ -4,72 +4,59 @@
 
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Liste";
 
 }
 
 <div class="page-content">
     <div class="container">
+
+        <div class="row">
+            <h3>
+                <span>Ürün Listesi</span>
+            </h3>
+        </div>
+
         <div class="row">
             <div class="col-lg-12">
-                <!-- End .toolbox -->
-
                 <div class="products mb-3">
                     <div class="row justify-content-center">
 
+
                         @foreach (var item in Model)
                         {
-                            
-
                             <div class="col-4 col-md-4 col-lg-4 col-xl-3">
                                 <div class="product product-7 text-center">
                                     <figure class="product-media">
-                                        <span class="product-label label-new">New</span>
+                                        <span class="product-label label-new">Yeni</span>
                                         <a href="/product/detail/@item.Id">
                                             <img src="~/themes/assets/images/products/product-4.jpg" alt="Product image" class="product-image">
                                         </a>
 
                                         <div class="product-action-vertical">
                                             <a href="#" class="btn-product-icon btn-wishlist btn-expandable"><span>add to wishlist</span></a>
-                                            <a href="popup/quickView.html" class="btn-product-icon btn-quickview" title="Quick view"><span>Quick view</span></a>
-                                            <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Compare</span></a>
-                                        </div><!-- End .product-action-vertical -->
+                                            <a href="#" class="btn-product-icon btn-quickview" title="Quick view"><span>Görüntüle</span></a>
+                                            <a href="#" class="btn-product-icon btn-compare" title="Compare"><span>Karşılaştır</span></a>
+                                        </div>
 
                                         <div class="product-action">
-                                            <a href="#" class="btn-product btn-cart"><span>add to cart</span></a>
-                                        </div><!-- End .product-action -->
-                                    </figure><!-- End .product-media -->
+                                            <a href="#" class="btn-product btn-cart"><span>Sepete Ekle</span></a>
+                                        </div>
+                                    </figure>
 
                                     <div class="product-body">
-                                        <div class="product-cat">
-                                            <a href="#">Women</a>
-                                        </div><!-- End .product-cat -->
-                                        <h3 class="product-title"><a href="/product/detail/@item.Id">@item.Name</a></h3><!-- End .product-title -->
+                                        <h3 class="product-title"><a href="/product/detail/@item.Id">@item.Name</a></h3>
                                         <div class="product-price">
                                             @item.Price ₺
-                                        </div><!-- End .product-price -->
-                                        <div class="ratings-container">
-                                            <div class="ratings">
-                                                <div class="ratings-val" style="width: 20%;"></div><!-- End .ratings-val -->
-                                            </div><!-- End .ratings -->
-                                            <span class="ratings-text">( 2 Reviews )</span>
-                                        </div><!-- End .rating-container -->
-
-
-                                    </div><!-- End .product-body -->
-                                </div><!-- End .product -->
-                            </div><!-- End .col-sm-6 col-lg-4 col-xl-3 -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         }
-
-
-                    </div><!-- End .row -->
-                </div><!-- End .products -->
-
-
-
-            </div><!-- End .col-lg-9 -->
-            <!-- End .col-lg-3 -->
-        </div><!-- End .row -->
-    </div><!-- End .container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Molla - Bootstrap eCommerce Template</title>
+    <title>TGA || @ViewData["Title"]</title>
 
 
-    <meta name="keywords" content="HTML5 Template">
-    <meta name="description" content="Molla - Bootstrap eCommerce Template">
-    <meta name="author" content="p-themes">
+    <meta name="keywords" content="TGA">
+    <meta name="description" content="TGA">
+    <meta name="author" content="Emel Şahin">
 
 
     <!-- Favicon -->
@@ -54,68 +54,35 @@
                             <i class="icon-bars"></i>
                         </button>
 
-                        <a href="index.html" class="logo">
+                        <a href="/product/index" class="logo">
                             <img src="~/themes/assets/images/logo.png" alt="Molla Logo" width="105" height="25">
                         </a>
-
-                        <nav class="main-nav">
-                            <ul class="menu sf-arrows">
-                                <li class="megamenu-container active">
-                                    <a href="index.html" class="sf-with-ul">Home</a>
-                                </li>
-                            </ul><!-- End .menu -->
-                        </nav><!-- End .main-nav -->
-                    </div><!-- End .header-left -->
-
+                    </div>
                     <div class="header-right">
-                        <div class="header-search">
-                            <a href="#" class="search-toggle" role="button" title="Search"><i class="icon-search"></i></a>
-                            <form action="#" method="get">
-                                <div class="header-search-wrapper">
-                                    <label for="q" class="sr-only">Search</label>
-                                    <input type="search" class="form-control" name="q" id="q" placeholder="Search in..." required>
-                                </div><!-- End .header-search-wrapper -->
-                            </form>
-                        </div><!-- End .header-search -->
-                        <div class="dropdown compare-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static" title="Compare Products" aria-label="Compare Products">
-                                <i class="icon-random"></i>
-                            </a>
-                        </div><!-- End .compare-dropdown -->
-
-                        <div class="dropdown cart-dropdown">
-                            <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-display="static">
-                                <i class="icon-shopping-cart"></i>
-                            </a>
-                        </div><!-- End .cart-dropdown -->
-                        <div><li><a href="#signin-modal" data-toggle="modal"><i class="icon-user"></i>Login</a></li></div>
-                    </div><!-- End .header-right -->
-                </div><!-- End .container -->
-            </div><!-- End .header-middle -->
-        </header><!-- End .header -->
+                    </div>
+                </div>
+            </div>
+        </header>
 
         <main class="main">
 
             <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
                 <div class="container d-flex align-items-center">
 
-                </div><!-- End .container -->
-            </nav><!-- End .breadcrumb-nav -->
+                </div>
+            </nav>
 
             @RenderBody()
 
-        </main><!-- End .main -->
-
-
-
+        </main>
         <footer class="footer">
             <div class="footer-bottom">
                 <div class="container">
-                    <p class="footer-copyright">Copyright © Emel Şahin-2021</p><!-- End .footer-copyright -->
-                </div><!-- End .container -->
-            </div><!-- End .footer-bottom -->
-        </footer><!-- End .footer -->
-    </div><!-- End .page-wrapper -->
+                    <p class="footer-copyright">Copyright © Emel Şahin | @DateTime.Now.Year</p>
+                </div>
+            </div>
+        </footer>
+    </div>
     <button id="scroll-top" title="Back to Top"><i class="icon-arrow-up"></i></button>
 
     <!-- Plugins JS File -->

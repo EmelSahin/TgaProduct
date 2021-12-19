@@ -31,6 +31,22 @@ namespace TgaProduct.MvcCoreWebUI.Controllers
             comments.Comment = model.Comment;
             comments.ProductId = Convert.ToInt32(model.HiddenId);
             comments.Title = model.Title;
+
+
+            //if (!string.IsNullOrEmpty(model.Comment))
+            //{
+            //    var client = new RestClient("https://twinword-emotion-analysis-v1.p.rapidapi.com/analyze/");
+            //    var request = new RestRequest(Method.POST);
+            //    request.AddHeader("content-type", "application/x-www-form-urlencoded");
+            //    request.AddHeader("x-rapidapi-host", "twinword-emotion-analysis-v1.p.rapidapi.com");
+            //    request.AddHeader("x-rapidapi-key", "7722330e52msh5ea2575efa9153ep19b9edjsn04fb23efd4fe");
+            //    request.AddParameter("application/x-www-form-urlencoded", "text=" + model.Comment + "", ParameterType.RequestBody);
+            //    IRestResponse response = client.Execute(request);
+
+            //    dynamic data = JObject.Parse(response.Content);
+            //    string resultData = data.data;
+            //}
+
             _commentManager.Add(comments);
             return RedirectToAction("detail", "product", new { id = model.HiddenId });
         }
