@@ -1,0 +1,19 @@
+﻿@using TgaProduct.Entities.Concrete
+
+@model CommentViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+<div>
+
+    @using (Html.BeginForm("Add", "Comment", FormMethod.Post))
+    {
+        <input type="text" name="FullName" value="" class="form-control" placeholder="AdSoyad" /> <br />
+        <input type="text" name="Title" value="" class="form-control" placeholder="Başlık" /> <br />
+        <input type="text" name="Description" value="" class="form-control" placeholder="Açıklama" /> <br />
+        <button type="submit" class="btn btn-secondary">Ekle</button>
+    }
+</div>

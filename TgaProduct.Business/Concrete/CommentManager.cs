@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TgaProduct.Business.Abstract;
 using TgaProduct.DataAccess.Abstract;
 using TgaProduct.Entities.Concrete;
@@ -36,6 +32,11 @@ namespace TgaProduct.Business.Concrete
         public Comments GetById(int id)
         {
             return _commentsDal.GetById(id);
+        }
+
+        public List<Comments> CommentList(int id)
+        {
+            return _commentsDal.GetByProductComment(id);
         }
 
         public void Update(Comments entity)

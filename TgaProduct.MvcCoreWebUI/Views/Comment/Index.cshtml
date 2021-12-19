@@ -1,0 +1,43 @@
+﻿@using TgaProduct.Entities.Concrete
+
+@model List<Comments>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Oluşturma Tarihi</th>
+        <th>Kullanıcı Adı</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Ürün</th>
+        <th>Sentiment</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.CreateDate.ToShortDateString()</td>
+            <td>@item.FullName</td>
+            <td>@item.Title</td>
+            <td>@item.Comment</td>
+            <td>@item.ProductId</td>
+            <td>
+                <a href="/product/detail/@item.Id" class="btn btn-secondary">Sentiment</a>
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+
+

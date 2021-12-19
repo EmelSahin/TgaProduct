@@ -1,5 +1,3 @@
-using System;
-
 namespace TgaProduct.MvcCoreWebUI.Models
 {
     public class ErrorViewModel

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TgaProduct.Entities.Concrete;
 
 namespace TgaProduct.Business.Abstract
@@ -14,5 +10,8 @@ namespace TgaProduct.Business.Abstract
         void Delete(Comments entity);
         List<Comments> GetAll();
         Comments GetById(int id);
+
+        List<Comments> CommentList(int id);
+
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TgaProduct.DataAccess.Abstract;
 using TgaProduct.DataAccess.Concrete;
 
@@ -10,7 +7,7 @@ namespace TgaProduct.DataAccess.Repository
 {
     public class GenericRepository<T> : IGenericDal<T> where T : class
     {
-        private DatabaseContext _databaseContext = new DatabaseContext();
+        public DatabaseContext _databaseContext = new DatabaseContext();
 
         public void Add(T entity)
         {
