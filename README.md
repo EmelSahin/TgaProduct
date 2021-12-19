@@ -1,2 +1,3 @@
 # TgaProduct
-Tga Product
+Asp.Net Mvc CORE ile N-Tier Architecture
+
