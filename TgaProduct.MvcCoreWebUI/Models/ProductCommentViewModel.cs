@@ -5,13 +5,15 @@ namespace TgaProduct.MvcCoreWebUI.Models
 {
     public class ProductCommentViewModel
     {
-        public Products Products { get; set; }
-        public List<Comments> Comments { get; set; }
+        public int Id { get; set; }
+        public List<CommentViewModel> Comments { get; set; }
 
-        public string HiddenId { get; set; }
-        public string FullName { get; set; }
-        public string Title { get; set; }
-        public string Comment { get; set; }
-        public string CreateDate { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Photo { get; set; }
+        public string Price { get; set; }
+        public string Color { get; set; }
+        public string Size { get; set; }
+
     }
 }

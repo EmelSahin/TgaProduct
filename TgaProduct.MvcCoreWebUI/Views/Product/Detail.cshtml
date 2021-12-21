@@ -21,7 +21,7 @@
                     <div class="product-gallery product-gallery-vertical">
                         <div class="row">
                             <figure class="product-main-image">
-                                <img id="product-zoom" src="~/themes/assets/images/products/single/1.jpg" data-zoom-image="~/themes/assets/images/products/single/1-big.jpg" alt="product image">
+                                <img id="product-zoom" src="@Model.Photo" data-zoom-image="@Model.Photo" alt="product image">
 
                                 <a href="#" id="btn-product-gallery" class="btn-product-gallery">
                                     <i class="icon-arrows"></i>
@@ -29,8 +29,8 @@
                             </figure>
 
                             <div id="product-zoom-gallery" class="product-image-gallery">
-                                <a class="product-gallery-item active" href="#" data-image="~/themes/assets/images/products/single/1.jpg" data-zoom-image="~/themes/assets/images/products/single/1-big.jpg">
-                                    <img src="~/themes/assets/images/products/single/1-small.jpg" alt="product side">
+                                <a class="product-gallery-item active" href="#" data-image="@Model.Photo" data-zoom-image="@Model.Photo">
+                                    <img src="@Model.Photo" alt="product side">
                                 </a>
                             </div>
                         </div>
@@ -39,28 +39,28 @@
 
                 <div class="col-md-6">
                     <div class="product-details">
-                        <h1 class="product-title">@Model.Products.Name</h1>
+                        <h1 class="product-title">@Model.Name</h1>
 
                         <div class="product-price">
-                            @Model.Products.Price ₺
+                            @Model.Price ₺
                         </div>
 
                         <div class="product-content">
-                            <p>@Model.Products.Description </p>
+                            <p>@Model.Description </p>
                         </div>
 
                         <div class="details-filter-row details-row-size">
                             <label>Renk : </label>
 
                             <div class="product-nav product-nav-thumbs">
-                                @Model.Products.Color
+                                @Model.Color
                             </div>
                         </div>
 
                         <div class="details-filter-row details-row-size">
                             <label for="size">Beden :</label>
                             <div class="product-nav product-nav-thumbs">
-                                @Model.Products.Size
+                                @Model.Size
                             </div>
                         </div>
 
@@ -100,13 +100,16 @@
                                         <span class="review-date">@item.CreateDate.ToShortDateString()</span>
                                     </div>
                                     <div class="col">
-                                        <h4>@item.Title</h4>
+                                        <h4>@item.Title</h4> 
 
                                         <div class="review-content">
                                             <p>
                                                 @item.Comment
                                             </p>
                                         </div>
+                                    </div>
+                                    <div>
+                                        <h4>@item.State</h4>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +131,7 @@
                             <div class="col-lg-12">
                                 <h2 class="checkout-title">Ürüne yorum yapın</h2>
 
-                                <input type="hidden" id="HiddenId" name="HiddenId" value="@Model.Products.Id" required="">
+                                <input type="hidden" id="ProductId" name="ProductId" value="@Model.Id" required="">
 
                                 <label>İsim soyisim</label>
                                 <input type="text" class="form-control" name="FullName" required="">
@@ -142,7 +145,7 @@
                         </div>
 
 
-                        <input type="submit" value="Mesaj Gönder" class="btn btn-success" />
+                        <input type="submit" value="Yorum Gönder" class="btn btn-success" />
 
 
                     </form>

@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.13">
       <PrivateAssets>all</PrivateAssets>
@@ -21,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TgaProduct.Business\TgaProduct.Business.csproj" />
+    <ProjectReference Include="..\TgaProductML.Model\TgaProductML.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -22,14 +22,13 @@ namespace TgaProduct.MvcCoreWebUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(ProductCommentViewModel model)
+        public IActionResult Add(CommentViewModel model)
         {
             Comments comments = new Comments();
-
             comments.FullName = model.FullName;
             comments.CreateDate = DateTime.Now;
             comments.Comment = model.Comment;
-            comments.ProductId = Convert.ToInt32(model.HiddenId);
+            comments.ProductId = Convert.ToInt32(model.ProductId);
             comments.Title = model.Title;
 
 
@@ -48,7 +47,7 @@ namespace TgaProduct.MvcCoreWebUI.Controllers
             //}
 
             _commentManager.Add(comments);
-            return RedirectToAction("detail", "product", new { id = model.HiddenId });
+            return RedirectToAction("detail", "product", new { id = model.ProductId });
         }
     }
 }

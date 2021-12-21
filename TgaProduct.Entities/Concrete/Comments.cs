@@ -12,5 +12,7 @@ namespace TgaProduct.Entities.Concrete
         public string FullName { get; set; }
         public string Title { get; set; }
         public int ProductId { get; set; }
+       
+
     }
 }
